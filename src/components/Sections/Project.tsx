@@ -5,7 +5,7 @@ import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 're
 
 import {isMobile} from '../../config';
 import {portfolioItems, SectionId} from '../../data/data';
-import {PortfolioItem} from '../../data/dataDef';
+import {ProjectItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
 
@@ -38,7 +38,7 @@ const Portfolio: FC = memo(() => {
 Portfolio.displayName = 'Projects';
 export default Portfolio;
 
-const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, description}}) => {
+const ItemOverlay: FC<{item: ProjectItem}> = memo(({item: {url, title, description}}) => {
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const linkRef = useRef<HTMLAnchorElement>(null);

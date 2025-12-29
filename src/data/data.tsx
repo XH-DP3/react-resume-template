@@ -26,10 +26,10 @@ import {
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
+  ProjectItem,
   SkillGroup,
   Social,
-  TestimonialSection,
+  WorkingStyleSection,
   TimelineItem
 } from './dataDef';
 
@@ -49,7 +49,7 @@ export const SectionId = {
   About: 'about',
   Projects: 'projects',
   Journey: 'journey',
-  Testimonials: 'testimonials',
+  WorkingStyle:'working-style',
   Contact: 'contact',
 } as const;
 
@@ -190,7 +190,7 @@ export const skills: SkillGroup[] = [
 /**
  * Portfolio section
  */
-export const portfolioItems: PortfolioItem[] = [
+export const portfolioItems: ProjectItem[] = [
   {
     title: 'Simple Music Player',
     description: 'A GUI-based music player application built with Java, supporting fundamental features such as play, pause, skip, and playlist management.',
@@ -297,25 +297,25 @@ export const whereIStarted: TimelineItem[] = [
 /**
  * Testimonial section
  */
-export const testimonial: TestimonialSection = {
+export const testimonial: WorkingStyleSection = {
   imageSrc: testimonialImage,
-  testimonials: [
+   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: "How I Work",
+      text:
+        "Structured, iterative, and disciplined. I break complex problems into smaller, well-defined steps and focus on steady improvement over time, prioritizing clarity and correctness rather than quick or fragile wins."
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: "Under Pressure",
+      text:
+       "Comfortable with difficulty and uncertainty. I stay persistent through non-linear progress, remain focused when results fluctuate, and prioritize long-term growth over short-term comparison or external validation."
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
+      name: "In Teams",
+      text:
+        "Ownership-driven and reliable. I value clarity, responsibility, and communication, and I focus on turning ideas into concrete, working systems while supporting team momentum and shared goals."
+    }
+  ]
 };
 
 /**

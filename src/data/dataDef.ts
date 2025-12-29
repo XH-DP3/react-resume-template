@@ -74,9 +74,9 @@ export interface SkillGroup {
 }
 
 /**
- * Portfolio section
+ * Project section
  */
-export interface PortfolioItem {
+export interface ProjectItem {
   title: string;
   description: string;
   url: string;
@@ -84,7 +84,7 @@ export interface PortfolioItem {
 }
 
 /**
- * Resume section
+ * Journey section
  */
 export interface TimelineItem {
   date: string;
@@ -94,14 +94,14 @@ export interface TimelineItem {
 }
 
 /**
- * Testimonial section
+ * Working Style section
  */
-export interface TestimonialSection {
+export interface WorkingStyleSection {
   imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
+  testimonials: WorkingStyle[];
 }
 
-export interface Testimonial {
+export interface WorkingStyle {
   image?: string;
   name: string;
   text: string;

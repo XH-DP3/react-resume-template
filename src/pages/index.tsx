@@ -7,8 +7,8 @@ import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
 import Projects from '../components/Sections/Project';
-import Journey from '../components/Sections/AcademicJourney';
-import Testimonials from '../components/Sections/Testimonials';
+import Journey from '../components/Sections/Journey';
+import Testimonials from '../components/Sections/WorkingStyle';
 import {homePageMeta} from '../data/data';
 
 // eslint-disable-next-line react-memo/require-memo
