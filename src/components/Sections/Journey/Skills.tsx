@@ -18,8 +18,8 @@ export const SkillGroup: FC<PropsWithChildren<{skillGroup: SkillGroupType}>> = m
 
 SkillGroup.displayName = 'SkillGroup';
 
-export const Skill: FC<{ skill: SkillType }> = memo(({ skill }) => {
-  const { name, description } = skill;
+export const Skill: FC<{skill: SkillType}> = memo(({skill}) => {
+  const {name, description} = skill;
 
   return (
     <div className="flex flex-col gap-1">
@@ -28,21 +28,13 @@ export const Skill: FC<{ skill: SkillType }> = memo(({ skill }) => {
         {/* accent bar */}
         <span className="h-[2px] w-2 rounded bg-orange-400 shrink-0" />
 
-        <span className="text-sm font-medium text-neutral-800">
-          {name}
-        </span>
+        <span className="text-sm font-medium text-neutral-800">{name}</span>
       </div>
 
       {/* description */}
-      {description && (
-        <span className="ml-5 text-sm text-neutral-500">
-          {description}
-        </span>
-      )}
+      {description && <span className="ml-5 text-sm text-neutral-500">{description}</span>}
     </div>
   );
 });
-
-
 
 Skill.displayName = 'Skill';

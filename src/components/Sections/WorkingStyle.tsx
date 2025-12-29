@@ -3,7 +3,7 @@ import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useSt
 
 import {isApple, isMobile} from '../../config';
 import {SectionId, testimonial} from '../../data/data';
-import type { WorkingStyle } from '../../data/dataDef';
+import type {WorkingStyle} from '../../data/dataDef';
 import useInterval from '../../hooks/useInterval';
 import useWindow from '../../hooks/useWindow';
 import Section from '../Layout/Section';
@@ -112,26 +112,20 @@ const Testimonials: FC = memo(() => {
   );
 });
 
-const WorkingStyle: FC<{ testimonial: WorkingStyle; isActive: boolean }> = memo(
-  ({ testimonial: { name, text }, isActive }) => (
+const WorkingStyle: FC<{testimonial: WorkingStyle; isActive: boolean}> = memo(
+  ({testimonial: {name, text}, isActive}) => (
     <div
       className={classNames(
         'flex w-full shrink-0 snap-start snap-always flex-col items-center gap-y-6 p-4 text-center transition-opacity duration-1000',
         isActive ? 'opacity-100' : 'opacity-0',
-      )}
-    >
+      )}>
       {/* Title */}
-      <h3 className="text-lg font-semibold uppercase tracking-wide text-white sm:text-xl">
-        {name}
-      </h3>
+      <h3 className="text-lg font-semibold uppercase tracking-wide text-white sm:text-xl">{name}</h3>
 
       {/* Body */}
-      <p className="max-w-prose text-sm font-medium text-white/90 sm:text-base">
-        {text}
-      </p>
+      <p className="max-w-prose text-sm font-medium text-white/90 sm:text-base">{text}</p>
     </div>
   ),
 );
-
 
 export default Testimonials;

@@ -2,12 +2,12 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   CalendarIcon,
+  ChartBarIcon,
+  ClockIcon,
+  CpuChipIcon,
+  IdentificationIcon,
   MapIcon,
   SparklesIcon,
-  CpuChipIcon,
-  ChartBarIcon,
-  IdentificationIcon,
-  ClockIcon
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
@@ -29,8 +29,8 @@ import {
   ProjectItem,
   SkillGroup,
   Social,
+  TimelineItem,
   WorkingStyleSection,
-  TimelineItem
 } from './dataDef';
 
 /**
@@ -38,7 +38,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Xinghao Huang',
-  description: "A personal space where I share my projects, thoughts, learning, and life.",
+  description: 'A personal space where I share my projects, thoughts, learning, and life.',
 };
 
 /**
@@ -49,7 +49,7 @@ export const SectionId = {
   About: 'about',
   Projects: 'projects',
   Journey: 'journey',
-  WorkingStyle:'working-style',
+  WorkingStyle: 'working-style',
   Contact: 'contact',
 } as const;
 
@@ -64,11 +64,12 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a third-year Statistics student at the University of British Columbia, 
-        with interests in data science and machine learning, and a concentration in computer science.
+        I'm a third-year Statistics student at the University of British Columbia, with interests in data science and
+        machine learning, and a concentration in computer science.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        This website is a space where I share my projects, reflections, and learning, documenting my growth over time and helping others get to know me better.
+        This website is a space where I share my projects, reflections, and learning, documenting my growth over time
+        and helping others get to know me better.
       </p>
     </>
   ),
@@ -101,7 +102,7 @@ export const aboutData: About = {
     {label: 'Study', text: 'University of British Columbia', Icon: AcademicCapIcon},
     {label: 'Focus', text: 'Statistics & Computer Science', Icon: CpuChipIcon},
     {label: 'Interests', text: 'Data Science & Machine Learning', Icon: ChartBarIcon},
-    {label: 'Hobbies', text: 'Basketball, Soccer, Music', Icon: SparklesIcon}
+    {label: 'Hobbies', text: 'Basketball, Soccer, Music', Icon: SparklesIcon},
   ],
 };
 
@@ -109,82 +110,81 @@ export const aboutData: About = {
  * Skills section
  */
 export const skills: SkillGroup[] = [
-    {
+  {
     name: 'Statistics & Data Analysis',
     skills: [
-        {
+      {
         name: 'Exploratory Data Analysis (EDA)',
         description: 'Data cleaning, transformation, and exploratory visualization for structured datasets',
         usedIn: ['Airbnb Prices Analysis', 'Canadian Fire Visualization'],
-        },
-        {
+      },
+      {
         name: 'Statistical Inference',
         description: 'Confidence intervals, hypothesis testing, and model-based inference',
         usedIn: ['Airbnb Prices Analysis'],
-        },
-        {
+      },
+      {
         name: 'Regression Modeling',
         description: 'Linear and logistic regression, diagnostics, transformations, and model selection',
         usedIn: ['Airbnb Prices Analysis'],
-        },
-        {
+      },
+      {
         name: 'Experimental & Comparative Analysis',
         description: 'ANOVA, A/B testing, and comparative evaluation of outcomes',
-        },
+      },
     ],
-    },
-    {
+  },
+  {
     name: 'Programming & Software Development',
     skills: [
-        {
+      {
         name: 'Python',
         description: 'Data analysis, scripting, and backend development',
         usedIn: ['Canadian Fire Visualization', 'SkySync', 'UBC Live'],
-        },
-        {
+      },
+      {
         name: 'R',
         description: 'Statistical modeling, inference, and visualization',
         usedIn: ['Airbnb Prices Analysis'],
-        },
-        {
+      },
+      {
         name: 'Java',
         description: 'Object-oriented programming, design patterns, and testing',
         usedIn: ['Simple Music Player'],
-        },
-        {
+      },
+      {
         name: 'C++',
-        description: 'Data structures, algorithms, memory management, and performance-oriented programming'
-        },
+        description: 'Data structures, algorithms, memory management, and performance-oriented programming',
+      },
     ],
-    },
-    {
+  },
+  {
     name: 'Computer Science Foundations',
     skills: [
-        {
+      {
         name: 'Object-Oriented Programming',
         description: 'Encapsulation, abstraction, and modular design',
         usedIn: ['Simple Music Player'],
-        },
-        {
+      },
+      {
         name: 'Data Structures & Algorithms',
         description: 'Time complexity analysis, core data structures, and algorithmic problem-solving',
-        },
-        {
+      },
+      {
         name: 'Memory & Performance Awareness',
         description: 'Pointers, references, and efficiency considerations',
-        },
+      },
     ],
-    },
-    {
+  },
+  {
     name: 'Tools & Workflow',
     skills: [
-        { name: 'Git & GitHub', description: 'Version control and collaborative development' },
-        { name: 'Jupyter & RStudio', description: 'Reproducible analysis and reporting' },
-        { name: 'VS Code', description: 'Development and debugging across languages' },
-        { name: 'Flask', description: 'Lightweight backend APIs', usedIn: ['SkySync'] },
+      {name: 'Git & GitHub', description: 'Version control and collaborative development'},
+      {name: 'Jupyter & RStudio', description: 'Reproducible analysis and reporting'},
+      {name: 'VS Code', description: 'Development and debugging across languages'},
+      {name: 'Flask', description: 'Lightweight backend APIs', usedIn: ['SkySync']},
     ],
-    }
-
+  },
 ];
 
 /**
@@ -193,13 +193,15 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: ProjectItem[] = [
   {
     title: 'Simple Music Player',
-    description: 'A GUI-based music player application built with Java, supporting fundamental features such as play, pause, skip, and playlist management.',
+    description:
+      'A GUI-based music player application built with Java, supporting fundamental features such as play, pause, skip, and playlist management.',
     url: 'https://github.com/XH-DP3/Simple-Music-Player',
     image: porfolioImage1,
   },
   {
     title: 'SkySync',
-    description: 'A weather-responsive web application that generates customized playlists based on real-time weather data.',
+    description:
+      'A weather-responsive web application that generates customized playlists based on real-time weather data.',
     url: 'https://github.com/XH-DP3/SkySync',
     image: porfolioImage2,
   },
@@ -211,10 +213,11 @@ export const portfolioItems: ProjectItem[] = [
   },
   {
     title: 'Airbnb Price Analysis in Athens',
-    description: 'An inferential study that analyzes factors influencing Airbnb prices in Athens, using statistical modeling techniques.',
+    description:
+      'An inferential study that analyzes factors influencing Airbnb prices in Athens, using statistical modeling techniques.',
     url: 'https://github.com/XH-DP3/Airbnb-Price-Analysis-in-Athens',
     image: porfolioImage4,
-  }
+  },
 ];
 
 /**
@@ -224,22 +227,33 @@ export const whereIStarted: TimelineItem[] = [
   {
     date: 'September 2023 - April 2024',
     location: 'Kelowna, BC',
-    title: 'Stage 1: Exploration at UBC Okanagan',  
+    title: 'Stage 1: Exploration at UBC Okanagan',
     content: (
-        <>
-            <p>
-                My university journey began at UBC Okanagan. At the time, I had little clarity about my future direction. I chose Statistics largely based on my family’s suggestion, without a clear understanding of what the field involved beyond basic data visualizations such as charts and graphs.
-            </p>
-            <p>
-                The transition was challenging. I was returning to an in-person learning environment after a long gap and was introduced to entirely new subjects, particularly computer science. I took my first-ever programming course during this period, which initially felt like learning a new language from scratch. Progress was slow, and I often had to revisit fundamental concepts repeatedly before they began to make sense.
-            </p> 
-            <p>
-                Academically and personally, the beginning did not match my expectations of university life. Adjusting to a new environment required me to consider how I studied, managed time, and approached unfamiliar material. Over time, as I adapted to the pace and structure of university coursework, I began to see steady improvement in both my understanding and academic performance.
-            </p>
-            <p>
-                By focusing on building a consistent routine centered around study and rest, I was able to establish a stable learning rhythm. This period became foundational for developing discipline, problem-solving skills, and resilience. I completed my first year with strong academic results, which allowed me to transfer to UBC Vancouver and continue refining my academic focus.
-            </p>
-        </>
+      <>
+        <p>
+          My university journey began at UBC Okanagan. At the time, I had little clarity about my future direction. I
+          chose Statistics largely based on my family’s suggestion, without a clear understanding of what the field
+          involved beyond basic data visualizations such as charts and graphs.
+        </p>
+        <p>
+          The transition was challenging. I was returning to an in-person learning environment after a long gap and was
+          introduced to entirely new subjects, particularly computer science. I took my first-ever programming course
+          during this period, which initially felt like learning a new language from scratch. Progress was slow, and I
+          often had to revisit fundamental concepts repeatedly before they began to make sense.
+        </p>
+        <p>
+          Academically and personally, the beginning did not match my expectations of university life. Adjusting to a
+          new environment required me to consider how I studied, managed time, and approached unfamiliar material. Over
+          time, as I adapted to the pace and structure of university coursework, I began to see steady improvement in
+          both my understanding and academic performance.
+        </p>
+        <p>
+          By focusing on building a consistent routine centered around study and rest, I was able to establish a stable
+          learning rhythm. This period became foundational for developing discipline, problem-solving skills, and
+          resilience. I completed my first year with strong academic results, which allowed me to transfer to UBC
+          Vancouver and continue refining my academic focus.
+        </p>
+      </>
     ),
   },
   {
@@ -247,51 +261,82 @@ export const whereIStarted: TimelineItem[] = [
     location: 'Vancouver, BC',
     title: 'Stage 2: Transition and Adjustment at UBC Vancouver',
     content: (
-        <>
-            <p>
-                After transferring to UBC Vancouver, I anticipated a higher level of difficulty and expected to overcome it in the same way I had during my first year. I had formally entered the Statistics major, which also meant encountering a new level of abstraction and rigor, beginning with my first upper-level statistics courses.
-            </p>
-            <p>
-                While the material itself was challenging, the more difficult realization was that the study strategies, techniques, and mindset that had worked well for me in my first year were no longer sufficient. Despite putting in significant effort, my results did not reflect the same level of progress I had previously experienced. This unfamiliar mismatch between input and outcome required me to reassess both my expectations and my approach to learning.
-            </p>
-            <p>
-                Academically, this period was marked by fluctuation rather than steady improvement. Progress felt inconsistent, and moments of confidence were often followed by setbacks. Entering a more competitive environment made me realize that I was no longer performing at the top of every class, a reality that was difficult to accept at first. This tension between effort, expectation, and outcome led to a period of frustration and uncertainty, and forced me to confront assumptions I had previously held about performance and success.
-            </p>
-            <p>
-                Over time, I came to accept this shift and recognized that comparison was less productive than focusing on long-term development. By the second term, I felt more stable and faced a clear choice: to ease my workload by lowering expectations, or to continue pushing forward and adapt to the new standard. I chose the latter.
-            </p>
-            <p>
-                By returning to a disciplined routine centered on focused study and deliberate rest, and by gradually refining how I approached complex material, I began to regain momentum. While this period did not bring an immediate return to the top of every class, it marked a clear transformation in my mindset and learning capacity. I became a consistently strong performer across many courses, with a more resilient approach to difficulty and a deeper understanding of how to sustain progress over time.
-            </p>
-        </>
-)
-
+      <>
+        <p>
+          After transferring to UBC Vancouver, I anticipated a higher level of difficulty and expected to overcome it in
+          the same way I had during my first year. I had formally entered the Statistics major, which also meant
+          encountering a new level of abstraction and rigor, beginning with my first upper-level statistics courses.
+        </p>
+        <p>
+          While the material itself was challenging, the more difficult realization was that the study strategies,
+          techniques, and mindset that had worked well for me in my first year were no longer sufficient. Despite
+          putting in significant effort, my results did not reflect the same level of progress I had previously
+          experienced. This unfamiliar mismatch between input and outcome required me to reassess both my expectations
+          and my approach to learning.
+        </p>
+        <p>
+          Academically, this period was marked by fluctuation rather than steady improvement. Progress felt
+          inconsistent, and moments of confidence were often followed by setbacks. Entering a more competitive
+          environment made me realize that I was no longer performing at the top of every class, a reality that was
+          difficult to accept at first. This tension between effort, expectation, and outcome led to a period of
+          frustration and uncertainty, and forced me to confront assumptions I had previously held about performance and
+          success.
+        </p>
+        <p>
+          Over time, I came to accept this shift and recognized that comparison was less productive than focusing on
+          long-term development. By the second term, I felt more stable and faced a clear choice: to ease my workload by
+          lowering expectations, or to continue pushing forward and adapt to the new standard. I chose the latter.
+        </p>
+        <p>
+          By returning to a disciplined routine centered on focused study and deliberate rest, and by gradually refining
+          how I approached complex material, I began to regain momentum. While this period did not bring an immediate
+          return to the top of every class, it marked a clear transformation in my mindset and learning capacity. I
+          became a consistently strong performer across many courses, with a more resilient approach to difficulty and a
+          deeper understanding of how to sustain progress over time.
+        </p>
+      </>
+    ),
   },
   {
     date: 'September 2025 - Present',
     location: 'Vancouver, BC',
     title: 'Stage 3: Focus and Direction',
     content: (
-    <>
-      <p>
-        Building on the exploration and adjustment of the first two stages, I entered my third year with greater clarity about my direction and stronger confidence in my foundation. With a more stable mindset and refined learning habits, I began actively seeking opportunities to gain experience beyond coursework, including participating in events, developing projects, and engaging more deeply with the academic and technical communities around me.
-      </p>
-      <p>
-        Through these experiences, I met many peers and became more aware of the diversity in academic starting points. Compared to many students who entered university with prior experience in programming or statistics, my own starting point was relatively late. I had no formal exposure to these fields before university, and much of my early time was spent exploring and building fundamentals. Recognizing this difference has helped me contextualize my progress rather than diminish it.
-      </p>
-      <p>
-        I am satisfied with what I have achieved so far, not because I believe I have reached an endpoint, but because my growth has been intentional and sustainable. While I may have started later than others, I now approach challenges with greater composure and resilience, understanding that fluctuations are a natural part of long-term development.
-      </p>
-      <p>
-        Over time, I have developed a personal rhythm for work and rest, shaped by repetition and reflection. I have learned to work with focus and commitment, and to consciously allow myself to rest once meaningful progress has been made. This approach has become a reliable framework that supports both productivity and well-being.
-      </p>
-      <p>
-        With a background in Statistics and a concentration in Computer Science, I am particularly drawn to data science and machine learning as future directions. I remain early in my journey and aware of how much there is still to learn, but I no longer view this as a disadvantage. Compared to where I was in previous years, I now move forward with clarity, patience, and the confidence that I will continue to grow with each stage ahead.
-      </p>
-    </>
-  )
+      <>
+        <p>
+          Building on the exploration and adjustment of the first two stages, I entered my third year with greater
+          clarity about my direction and stronger confidence in my foundation. With a more stable mindset and refined
+          learning habits, I began actively seeking opportunities to gain experience beyond coursework, including
+          participating in events, developing projects, and engaging more deeply with the academic and technical
+          communities around me.
+        </p>
+        <p>
+          Through these experiences, I met many peers and became more aware of the diversity in academic starting
+          points. Compared to many students who entered university with prior experience in programming or statistics,
+          my own starting point was relatively late. I had no formal exposure to these fields before university, and
+          much of my early time was spent exploring and building fundamentals. Recognizing this difference has helped me
+          contextualize my progress rather than diminish it.
+        </p>
+        <p>
+          I am satisfied with what I have achieved so far, not because I believe I have reached an endpoint, but because
+          my growth has been intentional and sustainable. While I may have started later than others, I now approach
+          challenges with greater composure and resilience, understanding that fluctuations are a natural part of
+          long-term development.
+        </p>
+        <p>
+          Over time, I have developed a personal rhythm for work and rest, shaped by repetition and reflection. I have
+          learned to work with focus and commitment, and to consciously allow myself to rest once meaningful progress
+          has been made. This approach has become a reliable framework that supports both productivity and well-being.
+        </p>
+        <p>
+          With a background in Statistics and a concentration in Computer Science, I am particularly drawn to data
+          science and machine learning as future directions. I remain early in my journey and aware of how much there is
+          still to learn, but I no longer view this as a disadvantage. Compared to where I was in previous years, I now
+          move forward with clarity, patience, and the confidence that I will continue to grow with each stage ahead.
+        </p>
+      </>
+    ),
   },
-  
 ];
 
 /**
@@ -299,23 +344,20 @@ export const whereIStarted: TimelineItem[] = [
  */
 export const testimonial: WorkingStyleSection = {
   imageSrc: testimonialImage,
-   testimonials: [
+  testimonials: [
     {
-      name: "How I Work",
-      text:
-        "Structured, iterative, and disciplined. I break complex problems into smaller, well-defined steps and focus on steady improvement over time, prioritizing clarity and correctness rather than quick or fragile wins."
+      name: 'How I Work',
+      text: 'Structured, iterative, and disciplined. I break complex problems into smaller, well-defined steps and focus on steady improvement over time, prioritizing clarity and correctness rather than quick or fragile wins.',
     },
     {
-      name: "Under Pressure",
-      text:
-       "Comfortable with difficulty and uncertainty. I stay persistent through non-linear progress, remain focused when results fluctuate, and prioritize long-term growth over short-term comparison or external validation."
+      name: 'Under Pressure',
+      text: 'Comfortable with difficulty and uncertainty. I stay persistent through non-linear progress, remain focused when results fluctuate, and prioritize long-term growth over short-term comparison or external validation.',
     },
     {
-      name: "In Teams",
-      text:
-        "Ownership-driven and reliable. I value clarity, responsibility, and communication, and I focus on turning ideas into concrete, working systems while supporting team momentum and shared goals."
-    }
-  ]
+      name: 'In Teams',
+      text: 'Ownership-driven and reliable. I value clarity, responsibility, and communication, and I focus on turning ideas into concrete, working systems while supporting team momentum and shared goals.',
+    },
+  ],
 };
 
 /**
@@ -355,5 +397,5 @@ export const contact: ContactSection = {
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/XH-DP3'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/xinghao-huang-597910300/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/huangxinghao512/'}
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/huangxinghao512/'},
 ];
